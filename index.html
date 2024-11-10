@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        td {
+            font-size: 16px;
+            color: #333;
+        }
+        .button-row {
+            text-align: center;
+        }
+        .button-row button {
+            padding: 10px 20px;
+            margin: 8px;
+            margin-left: 70px;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button-row button:hover {
+            background: linear-gradient(to right, #ff5e62, #ff9966);
+            transform: scale(1.05);
+        }
+        .button-row button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">Web Designing ALA </th>
+        </tr>
+        <tr>
+            <td>Subject Name : </td>
+            <td id="subjectName">Web Designing</td>
+        </tr>
+        <tr>
+            <td>Subject Code : </td>
+            <td id="subjectCode">BETCE13304</td>
+        </tr>
+        <tr>
+            <td>Student Name : </td>
+            <td id="studentName">Parikshit Mevada</td>
+        </tr>
+        <tr>
+            <td>Enrollment No. : </td>
+            <td id="enrollmentNo">240905091011</td>
+        </tr>
+        <tr class="button-row">
+            <td colspan="2">
+                <button onclick="navigateTo('https://example.com/ALA-1')">ALA - 1</button>
+                <button onclick="navigateTo('https://example.com/ALA-2')">ALA - 2</button>
+                <button onclick="navigateTo('https://example.com/ALA-3')">ALA - 3</button>
+            </td>
+        </tr>
+        <tr>
+            <td>University Name : </td>
+            <td id="universityName">Gyanmanjari Innovative University</td>
+        </tr>
+    </table>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
